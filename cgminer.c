@@ -4282,6 +4282,7 @@ void *miner_thread(void *userdata)
 			break;
 		}
 		requested = false;
+		cgpu->new_work = true;
 		gettimeofday(&tv_workstart, NULL);
 		work->blk.nonce = 0;
 		cgpu->max_hashes = 0;
